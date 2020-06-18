@@ -1,0 +1,106 @@
+/* home
+*******************************************************************/
+
+.section-welcome,
+.section-wizard-step-1,
+.section-wizard-step-2,
+.section-wizard-step-3 {
+  text-align: center;
+  padding: 10vh 0;
+  position: relative;
+}
+
+.section-welcome {
+  height: 70vh;
+  padding: 10vh 0 0;
+  h1 {
+    font-size: 88px;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin-bottom: 160px;
+    small {
+      display: block;
+      font-size: 48px;
+      color: $gray-800;
+      font-weight: 700;
+    }
+  }
+}
+
+.section-wizard-step-1,
+.section-wizard-step-2,
+.section-wizard-step-3 {
+  h2 {
+    margin-bottom: 1.125em;
+    font-size: 52px;
+    font-weight: 300;
+    .num {
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      background: $app-color-1;
+      color: $white;
+      font-weight: 700;
+      text-align: center;
+      font-size: 40px;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+      margin-right: .4em;
+      top: -.1em;
+    }
+  }
+  h3 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 64px;
+  }
+}
+
+.section-wizard-step-1_1,
+.section-wizard-step-1_2,
+.section-wizard-step-1_3 {
+  position: relative;
+  margin-bottom: 10vh;
+}
+
+.section-wizard-step-2 {
+  table {
+    td {
+      padding: 25px 15px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  }
+  .section-wizard-step-2-img,
+  .section-wizard-step-2-box {
+    position: relative;
+    width: 45vw;
+    left: 0;
+  }
+  .section-wizard-step-2-img {
+    > img:first-of-type {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.section-wizard-step-3 {
+  .row .position-relative::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 90px;
+    bottom: 90px;
+    width: 1px;
+    border: 1px solid $gray-100;
+  }
+}

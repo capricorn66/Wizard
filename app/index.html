@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <title>SWISS KRONO: Dopasuj podłogę do swoich potrzeb</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="brand" href="#">
+                <img src="./images/sk-logo.svg" alt="visionoptyk">
+            </a>
+            <h2>Dopasuj podłogę do swoich potrzeb</h2>
+            <a href=""><strong>Gdzie kupić?</strong></a>
+        </div>
+    </header>
+
+    <section class="section-welcome">
+        <div class="container">
+
+            <h1>Wybierz podłogę dla siebie <small>w 3 prostych krokach</small></h1>
+            <button class="btn btn-primary btn-lg">ROZPOCZNIJ</button>
+
+        </div>
+    </section>
+
+    <section class="section-wizard-step-1">
+        <div class="section-wizard-step-1_1">
+            <h2>
+                <div class="num">1</div>
+                Jak ma wyglądać Twoja podłoga?
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 position-static">
+                    <label class="panel-label" for="floor_1_1_warm">
+                        <span class="panel panel-warm">
+                            <img src="images/warm-panel.png" height="660" width="1322"/>
+                        </span>
+                        <img src="images/warm.png" class="img-fluid mb-20" height="391" width="846"/>
+                        <span class="label mb-40">
+                            CIEPŁA
+                            <input type="radio" name="floor_1_1" id="floor_1_1_warm">
+                            <span class="radio ml-15"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="col-lg-5 position-static">
+                    <label class="panel-label" for="floor_1_1_cold">
+                        <span class="panel panel-cold">
+                            <img src="images/cold-panel.png" height="660" width="1322"/>
+                        </span>
+                        <img src="images/cold.png" class="img-fluid mb-20" height="391" width="846"/>
+                        <span class="label mb-40">
+                            CHŁODNA
+                            <input type="radio" name="floor_1_1" id="floor_1_1_cold">
+                            <span class="radio ml-15"></span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-wizard-step-1_2">
+            <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-3">
+                    <label for="floor_1_2_brighter">
+                        <img src="images/brighter.png" class="img-fluid mb-30" height="535" width="275"/>
+                        <span class="label flex-column">
+                            BARDZO JASNA
+                            <input type="radio" name="floor_1_2" id="floor_1_2_brighter">
+                            <span class="radio mt-10"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="col-lg-3">
+                    <label for="floor_1_2_bright">
+                        <img src="images/bright.png" class="img-fluid mb-30" height="535" width="275"/>
+                        <span class="label flex-column">
+                            JASNA
+                            <input type="radio" name="floor_1_2" id="floor_1_2_bright">
+                            <span class="radio mt-10"></span>
+                        </span>
+                    </label>
+                </div>
+                <div class="col-lg-3">
+                    <label for="floor_1_2_dark">
+                        <img src="images/dark.png" class="img-fluid mb-30" height="535" width="275"/>
+                        <span class="label flex-column">
+                            CIEMNA
+                            <input type="radio" name="floor_1_2" id="floor_1_2_dark">
+                            <span class="radio mt-10"></span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <label for="floor_1_3_mat">
+                    <img src="images/mat.png" class="img-fluid mb-30" height="601" width="948"/>
+                    <span class="label">
+                        MATOWA
+                        <input type="radio" name="floor_1_3" id="floor_1_3_mat">
+                        <span class="radio ml-15"></span>
+                    </span>
+                </label>
+            </div>
+            <div class="col-lg-5">
+                <label for="floor_1_3_shine">
+                    <img src="images/shine.png" class="img-fluid mb-30" height="601" width="952"/>
+                    <span class="label">
+                        Z POŁYSKIEM
+                        <input type="radio" name="floor_1_3" id="floor_1_3_shine">
+                        <span class="radio ml-15"></span>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section-wizard-step-2">
+        <div class="container">
+            <h2>
+                <div class="num">2</div>
+                Jaka ma być jej wytrzymałość i odporność?wytrzymałość i odpornoś
+            </h2>
+
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-left">
+                    <table class="mb-30">
+                        <tr>
+                            <td class="valign">
+                                <label class="label w-100 justify-content-between mb-0" for="floor_2_AC4">
+                                    DOBRA
+                                    <input type="radio" name="floor_2" id="floor_2_AC4">
+                                    <span class="radio ml-30"></span>
+                                </label>
+                            </td>
+                            <td class="gray-500">
+                                Opis klasy ścieralności …
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-ac4 font-60"></i>
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-y20 font-60"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="label w-100 justify-content-between mb-0" for="floor_2_AC5">
+                                    BARDZO DOBRA
+                                    <input type="radio" name="floor_2" id="floor_2_AC5">
+                                    <span class="radio ml-30"></span>
+                                </label>
+                            </td>
+                            <td class="gray-500">
+                                Opis klasy ścieralności …
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-ac5 font-60"></i>
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-y30 font-60"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="label w-100 justify-content-between mb-0" for="floor_2_AC6">
+                                    WYBITNA
+                                    <input type="radio" name="floor_2" id="floor_2_AC6">
+                                    <span class="radio ml-30"></span>
+                                </label>
+                            </td>
+                            <td class="gray-500">
+                                Opis klasy ścieralności …
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-ac6 font-60"></i>
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-y40 font-60"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="label w-100 justify-content-between mb-0" for="floor_2_AQZ">
+                                    WODOODPORNOŚĆ
+                                    <input type="radio" name="floor_2" id="floor_2_AQZ">
+                                    <span class="radio ml-30"></span>
+                                </label>
+                            </td>
+                            <td class="gray-500">
+                                Opis klasy ścieralności …
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-i-18 font-70 app-color-2"></i>
+                            </td>
+                            <td class="text-center">
+                                <strong class="app-color-2">do 24h</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                Wszystkie nasze podłogi są przystosowane do <strong>ogrzewania podłogowego</strong>
+                            </td>
+                            <td class="text-center">
+                                <i class="icon-heating font-50"></i>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+
+                </div>
+                <div class="col-lg-4 text-left position-relative">
+                    <div class="section-wizard-step-2-box">
+                        <div class="section-wizard-step-2-img">
+                            <img src="images/ac-drop.png" class="img-fluid"/>
+                            <img src="images/ac.png" class="img-fluid"/>
+                        </div>
+                        <p class="app-color-2">Przy podłogach wodoodpornych Aqua Zero rekomendowany jest montaż przez specjalistę. Informację o
+                        możliwości montażu otrzymasz w punktach sprzedaży.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-wizard-step-3">
+        <h2>
+            <div class="num">3</div>
+            Jakie mają być wymiary paneli?
+        </h2>
+        <div class="row justify-content-between mb-60">
+            <div class="col-lg-6 d-flex flex-column pr-80 position-relative">
+                <div class="text-right">
+                    <h3>Grubość paneli</h3>
+                </div>
+                <div class="row align-items-center flex-grow-1">
+                    <div class="col-lg-7">
+                        <img src="images/thickness.png" class="img-fluid" height="561" width="640"/>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column justify-content-between align-items-end">
+                            <label class="label mb-40" for="floor_3_1_8mm">
+                                <input type="radio" name="floor_3_1" id="floor_3_1_8mm">
+                                <span class="radio ml-30"></span>
+                                <i class="icon-mm8 font-70 ml-40"></i>
+                            </label>
+                            <label class="label mb-40" for="floor_3_1_10mm">
+                                <input type="radio" name="floor_3_1" id="floor_3_1_10mm">
+                                <span class="radio ml-30"></span>
+                                <i class="icon-mm10 font-70 ml-40"></i>
+                            </label>
+                            <label class="label mb-40" for="floor_3_1_12mm">
+                                <input type="radio" name="floor_3_1" id="floor_3_1_12mm">
+                                <span class="radio ml-30"></span>
+                                <i class="icon-mm12 font-70 ml-40"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex flex-column pl-80">
+                <div class="text-left">
+                    <h3>Wielkość paneli</h3>
+                </div>
+                <div class="row align-items-center flex-grow-1">
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column justify-content-between align-items-start">
+                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_M">
+                                WĄSKI (M)
+                                <input type="radio" name="floor_3_2" id="floor_3_2_M">
+                                <span class="radio ml-30"></span>
+                            </label>
+                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_L">
+                                KLASYCZNY (L)
+                                <input type="radio" name="floor_3_2" id="floor_3_2_L">
+                                <span class="radio ml-30"></span>
+                            </label>
+                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_XL">
+                                SZEROKI (XL)
+                                <input type="radio" name="floor_3_2" id="floor_3_2_XL">
+                                <span class="radio ml-30"></span>
+                            </label>
+                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_XXL">
+                                XXL
+                                <input type="radio" name="floor_3_2" id="floor_3_2_XXL">
+                                <span class="radio ml-30"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 d-flex align-items-end">
+                        <img src="images/man.png" class="img-fluid mb-30 mr-n30" height="645" width="203"/>
+                        <div class="d-flex flex-column">
+                            <img src="images/panel-m.png" class="img-fluid" height="469" width="63"/>
+                            <span class="white mt-n40 mb-20">M</span>
+                            <span class="gray-500">wąski</span>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <img src="images/panel-l.png" class="img-fluid" height="468" width="76"/>
+                            <span class="white mt-n40 mb-20">L</span>
+                            <span class="gray-500">klasyczny</span>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <img src="images/panel-xl.png" class="img-fluid" height="468" width="90"/>
+                            <span class="white mt-n40 mb-20">XL</span>
+                            <span class="gray-500">szeroki</span>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <img src="images/panel-xxl.png" class="img-fluid" height="706" width="94"/>
+                            <span class="mt-n40 mb-20">XXL</span>
+                            <span class="gray-500">XXL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg">ZOBACZ WYBRANE PODŁOGI</button>
+
+    </section>
+
+    <div class="wizard-summary">
+        <span class="mr-60 d-flex align-items-center">WYBRANE PODŁOGI: <strong class="ml-5">18</strong></span>
+        <span class="ml-60"><button class="btn white p-0">WYCZYŚĆ <i class="icon-refresh ml-10"></i></button></span>
+    </div>
+
+    <div class="bs4-xs d-block d-sm-none"></div>
+    <div class="bs4-sm d-none d-sm-block d-md-none"></div>
+    <div class="bs4-md d-none d-md-block d-lg-none"></div>
+    <div class="bs4-lg d-none d-lg-block d-xl-none"></div>
+    <div class="bs4-xl d-none d-xl-block d-xxl-none"></div>
+
+</body>
+</html>

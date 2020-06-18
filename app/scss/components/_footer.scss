@@ -1,0 +1,17 @@
+/* footer
+*******************************************************************/
+
+footer {
+  padding: 15px 30px;
+  font-size: 14px;
+  background-color: $gray-100;
+  small {
+    color: $gray-300;
+    line-height: 1.3em;
+    display: block;
+    margin-bottom: 50px;
+  }
+  a {
+    margin-right: 20px;
+  }
+}
