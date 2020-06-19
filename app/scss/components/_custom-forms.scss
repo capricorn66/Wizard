@@ -35,7 +35,7 @@
   -ms-flex-align: center;
   align-items: center;
   font-size: 24px;
-  input[type="radio"] {
+  input[type="checkbox"] {
     display: none;
     &:checked ~ .radio {
       background-color: $app-color-1;
@@ -57,7 +57,7 @@
 
 .btn-label {
   padding: 0;
-  input[type="radio"] {
+  input[type="checkbox"] {
     display: none;
     &:checked ~ .label {
       background-color: $app-color-1;
