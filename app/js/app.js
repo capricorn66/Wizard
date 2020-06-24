@@ -10,6 +10,9 @@ import 'bootstrap/js/dist/popover';
 import 'bootstrap/js/dist/alert';
 import 'bootstrap/js/dist/collapse';
 import Cookies from 'js-cookie';
+import AnimWithScroll from "./AnimWithScroll";
+import inView from "in-view";
+
 
 window.debounce = debounce;
 window.rwdMedia = rwdMedia;
@@ -21,6 +24,39 @@ $(document).ready(function(e) {
     window.onscroll = function() {handleHeader()};
     handleHeader();
     rippletInit();
+
+    configElem.map(
+        elemCfg => new AnimWithScroll( elemCfg )
+    );
+
+    inView('.section-welcome')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
+
+    inView('.section-wizard-step-1_1')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
+
+    inView('.section-wizard-step-1_3')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
+
+    inView('.section-wizard-step-2')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
+
+    inView('.section-wizard-step-3')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
+
+    inView.offset({bottom: 300});
+
+
 
 });
 
@@ -36,3 +72,40 @@ function handleHeader() {
 // jQuery.fn.jquery
 // $.fn.popover.Constructor.VERSION
 // $.fn.hasAttr
+
+
+const configElem = [
+    {
+        elem: '#js-gfx-floor_brighter',
+        scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
+        scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
+        styles: {
+            transform: {
+                scale: [1,.7]
+            }
+        },
+        breakpoint: ['lg', 'xl']
+    },
+    {
+        elem: '#js-gfx-floor_bright',
+        scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
+        scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
+        styles: {
+            transform: {
+                scale: [1,.7]
+            }
+        },
+        breakpoint: ['lg', 'xl']
+    },
+    {
+        elem: '#js-gfx-floor_dark',
+        scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
+        scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
+        styles: {
+            transform: {
+                scale: [1,.7]
+            }
+        },
+        breakpoint: ['lg', 'xl']
+    }
+];

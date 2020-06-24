@@ -61,11 +61,13 @@
                         <span class="panel panel-warm">
                             <img src="images/warm-panel.png" height="660" width="1322"/>
                         </span>
-                        <img src="images/warm.png" class="img-fluid mb-20" height="391" width="846"/>
-                        <span class="label mb-40">
-                            CIEPŁA
-                            <input type="checkbox" name="floor_1_1" id="floor_1_1_warm">
-                            <span class="radio ml-15"></span>
+                        <span class="interior">
+                            <img src="images/warm.png" class="img-fluid mb-20" height="391" width="846"/>
+                            <span class="label mb-40">
+                                CIEPŁA
+                                <input type="checkbox" name="floor_1_1" id="floor_1_1_warm">
+                                <span class="radio ml-15"></span>
+                            </span>
                         </span>
                     </label>
                 </div>
@@ -74,11 +76,13 @@
                         <span class="panel panel-cold">
                             <img src="images/cold-panel.png" height="660" width="1322"/>
                         </span>
-                        <img src="images/cold.png" class="img-fluid mb-20" height="391" width="846"/>
-                        <span class="label mb-40">
-                            CHŁODNA
-                            <input type="checkbox" name="floor_1_1" id="floor_1_1_cold">
-                            <span class="radio ml-15"></span>
+                        <span class="interior">
+                            <img src="images/cold.png" class="img-fluid mb-20" height="391" width="846"/>
+                            <span class="label mb-40">
+                                CHŁODNA
+                                <input type="checkbox" name="floor_1_1" id="floor_1_1_cold">
+                                <span class="radio ml-15"></span>
+                            </span>
                         </span>
                     </label>
                 </div>
@@ -86,62 +90,64 @@
         </div>
 
         <div class="section-wizard-step-1_2">
-            <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-3">
-                    <label for="floor_1_2_brighter">
-                        <img src="images/brighter.png" class="img-fluid mb-30" height="535" width="275"/>
-                        <span class="label flex-column">
-                            BARDZO JASNA
-                            <input type="checkbox" name="floor_1_2" id="floor_1_2_brighter">
-                            <span class="radio mt-10"></span>
-                        </span>
-                    </label>
-                </div>
-                <div class="col-lg-3">
-                    <label for="floor_1_2_bright">
-                        <img src="images/bright.png" class="img-fluid mb-30" height="535" width="275"/>
-                        <span class="label flex-column">
-                            JASNA
-                            <input type="checkbox" name="floor_1_2" id="floor_1_2_bright">
-                            <span class="radio mt-10"></span>
-                        </span>
-                    </label>
-                </div>
-                <div class="col-lg-3">
-                    <label for="floor_1_2_dark">
-                        <img src="images/dark.png" class="img-fluid mb-30" height="535" width="275"/>
-                        <span class="label flex-column">
-                            CIEMNA
-                            <input type="checkbox" name="floor_1_2" id="floor_1_2_dark">
-                            <span class="radio mt-10"></span>
-                        </span>
-                    </label>
+            <div class="container position-sticky">
+                <div class="row justify-content-between">
+                    <div class="col-lg-4 px-0">
+                        <label for="floor_1_2_brighter" class="d-flex flex-column align-items-center">
+                            <img src="images/brighter.png" id="js-gfx-floor_brighter" class="img-fluid gfx-scroll mb-30"/>
+                            <span class="label flex-column">
+                                BARDZO JASNA
+                                <input type="checkbox" name="floor_1_2" id="floor_1_2_brighter">
+                                <span class="radio mt-10"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-lg-4 px-0">
+                        <label for="floor_1_2_bright" class="d-flex flex-column align-items-center">
+                            <img src="images/bright.png" id="js-gfx-floor_bright" class="img-fluid gfx-scroll mb-30"/>
+                            <span class="label flex-column">
+                                JASNA
+                                <input type="checkbox" name="floor_1_2" id="floor_1_2_bright">
+                                <span class="radio mt-10"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-lg-4 px-0">
+                        <label for="floor_1_2_dark" class="d-flex flex-column align-items-center">
+                            <img src="images/dark.png" id="js-gfx-floor_dark" class="img-fluid gfx-scroll mb-30"/>
+                            <span class="label flex-column">
+                                CIEMNA
+                                <input type="checkbox" name="floor_1_2" id="floor_1_2_dark">
+                                <span class="radio mt-10"></span>
+                            </span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
-                <label for="floor_1_3_mat">
-                    <img src="images/mat.png" class="img-fluid mb-30" height="601" width="948"/>
-                    <span class="label">
+        <div class="section-wizard-step-1_3">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <label for="floor_1_3_mat">
+                        <img src="images/mat.png" class="interior-mat img-fluid mb-30" height="601" width="948"/>
+                        <span class="label">
                         MATOWA
                         <input type="checkbox" name="floor_1_3" id="floor_1_3_mat">
                         <span class="radio ml-15"></span>
                     </span>
-                </label>
-            </div>
-            <div class="col-lg-5">
-                <label for="floor_1_3_shine">
-                    <img src="images/shine.png" class="img-fluid mb-30" height="601" width="952"/>
-                    <span class="label">
+                    </label>
+                </div>
+                <div class="col-lg-5">
+                    <label for="floor_1_3_shine">
+                        <img src="images/shine.png" class="interior-shine img-fluid mb-30" height="601" width="952"/>
+                        <span class="label">
                         Z POŁYSKIEM
                         <input type="checkbox" name="floor_1_3" id="floor_1_3_shine">
                         <span class="radio ml-15"></span>
                     </span>
-                </label>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -151,11 +157,11 @@
         <div class="container">
             <h2>
                 <div class="num">2</div>
-                Jaka ma być jej wytrzymałość i odporność?wytrzymałość i odpornoś
+                Jaka ma być jej wytrzymałość i odporność?
             </h2>
 
-            <div class="row align-items-center">
-                <div class="col-lg-8 text-left">
+            <div class="row align-items-center section-wizard-step-2-body">
+                <div class="col-lg-9 col-xl-8 text-left">
                     <table class="mb-30">
                         <tr>
                             <td class="valign">
@@ -166,13 +172,13 @@
                                 </label>
                             </td>
                             <td class="gray-500">
-                                Opis klasy ścieralności …
+                                mieszkanie: średnie natężenie ruchu, lokal użyteczności publicznej: niskie natężenie ruchu
                             </td>
                             <td class="text-center">
-                                <i class="icon-ac4 font-60"></i>
+                                <i class="icon-ac4"></i>
                             </td>
                             <td class="text-center">
-                                <i class="icon-y20 font-60"></i>
+                                <i class="icon-y20"></i>
                             </td>
                         </tr>
                         <tr>
@@ -184,13 +190,13 @@
                                 </label>
                             </td>
                             <td class="gray-500">
-                                Opis klasy ścieralności …
+                                mieszkanie oraz lokal użyteczności publicznej: wzmożone natężenie ruchu
                             </td>
                             <td class="text-center">
-                                <i class="icon-ac5 font-60"></i>
+                                <i class="icon-ac5"></i>
                             </td>
                             <td class="text-center">
-                                <i class="icon-y30 font-60"></i>
+                                <i class="icon-y30"></i>
                             </td>
                         </tr>
                         <tr>
@@ -202,13 +208,13 @@
                                 </label>
                             </td>
                             <td class="gray-500">
-                                Opis klasy ścieralności …
+                                najwyższa dostępna na rynku klasa ścieralności
                             </td>
                             <td class="text-center">
-                                <i class="icon-ac6 font-60"></i>
+                                <i class="icon-ac6"></i>
                             </td>
                             <td class="text-center">
-                                <i class="icon-y40 font-60"></i>
+                                <i class="icon-y40"></i>
                             </td>
                         </tr>
                         <tr>
@@ -220,10 +226,10 @@
                                 </label>
                             </td>
                             <td class="gray-500">
-                                Opis klasy ścieralności …
+                                wodoodporna płyta i szczelny zamek Aqua Pearl
                             </td>
                             <td class="text-center">
-                                <i class="icon-i-18 font-70 app-color-2"></i>
+                                <i class="icon-i-18 app-color-2"></i>
                             </td>
                             <td class="text-center">
                                 <strong class="app-color-2">do 24h</strong>
@@ -239,13 +245,11 @@
                             <td></td>
                         </tr>
                     </table>
-
-
                 </div>
-                <div class="col-lg-4 text-left position-relative">
+                <div class="col-lg-3 col-xl-4 text-left position-relative">
                     <div class="section-wizard-step-2-box">
                         <div class="section-wizard-step-2-img">
-                            <img src="images/ac-drop.png" class="img-fluid"/>
+                            <img src="images/ac-drop.png" class="img-fluid section-wizard-step-2-img-drop"/>
                             <img src="images/ac.png" class="img-fluid"/>
                         </div>
                         <p class="app-color-2">Przy podłogach wodoodpornych Aqua Zero rekomendowany jest montaż przez specjalistę. Informację o
@@ -264,10 +268,10 @@
         </h2>
         <div class="row justify-content-between mb-60">
             <div class="col-lg-6 d-flex flex-column pr-80 position-relative">
-                <div class="text-right">
+                <div class="text-right box-thickness-header">
                     <h3>Grubość paneli</h3>
                 </div>
-                <div class="row align-items-center flex-grow-1">
+                <div class="row align-items-center flex-grow-1 box-thickness-body">
                     <div class="col-lg-7">
                         <img src="images/thickness.png" class="img-fluid" height="561" width="640"/>
                     </div>
@@ -293,10 +297,10 @@
                 </div>
             </div>
             <div class="col-lg-6 d-flex flex-column pl-80">
-                <div class="text-left">
+                <div class="text-left box-floor-header">
                     <h3>Wielkość paneli</h3>
                 </div>
-                <div class="row align-items-center flex-grow-1">
+                <div class="row align-items-center flex-grow-1 box-floor-body">
                     <div class="col-lg-5">
                         <div class="d-flex flex-column justify-content-between align-items-start">
                             <label class="label w-100 justify-content-between mb-40" for="floor_3_2_M">
@@ -322,7 +326,7 @@
                         </div>
                     </div>
                     <div class="col-lg-7 d-flex align-items-end">
-                        <img src="images/man.png" class="img-fluid mb-30 mr-n30" height="645" width="203"/>
+                        <img src="images/man.png" class="img-fluid gfx-man mb-30 mr-n30" height="645" width="203"/>
                         <div class="d-flex flex-column">
                             <img src="images/panel-m.png" class="img-fluid" height="469" width="63"/>
                             <span class="white mt-n40 mb-20">M</span>
