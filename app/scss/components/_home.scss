@@ -7,6 +7,12 @@
 .section-wizard-step-3 {
   text-align: center;
   padding: 10vh 0;
+  @include media-breakpoint-only(lg) {
+    padding: 80px 0;
+  }
+  @include media-breakpoint-only(md) {
+    padding: 50px 0;
+  }
   position: relative;
 }
 
@@ -23,6 +29,10 @@
     line-height: 1.3em;
     font-size: 88px;
     margin-bottom: 160px;
+    @include media-breakpoint-only(md) {
+      font-size: 56px;
+      margin-bottom: 100px;
+    }
     @include media-breakpoint-only(lg) {
       font-size: 70px;
       margin-bottom: 120px;
@@ -35,6 +45,9 @@
       font-size: 48px;
       color: $gray-800;
       font-weight: 700;
+      @include media-breakpoint-only(md) {
+        font-size: 32px;
+      }
       @include media-breakpoint-only(lg) {
         font-size: 36px;
       }
@@ -71,6 +84,9 @@
   h2 {
     margin-bottom: 1.125em;
     font-size: 52px;
+    @include media-breakpoint-only(md) {
+      font-size: 34px;
+    }
     @include media-breakpoint-only(lg) {
       font-size: 40px;
     }
@@ -83,6 +99,12 @@
       height: 64px;
       border-radius: 32px;
       font-size: 40px;
+      @include media-breakpoint-only(md) {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        font-size: 26px;
+      }
       @include media-breakpoint-only(lg) {
         width: 48px;
         height: 48px;
@@ -112,6 +134,9 @@
     font-weight: 400;
     letter-spacing: 4px;
     margin-bottom: 64px;
+    @include media-breakpoint-only(md) {
+      font-size: 24px;
+    }
     @include media-breakpoint-only(lg) {
       font-size: 28px;
     }
@@ -133,6 +158,13 @@
 
   .section-wizard-step-1_1 {
     padding-top: 10vh;
+    @include media-breakpoint-only(lg) {
+      padding-top: 80px;
+    }
+    @include media-breakpoint-only(md) {
+      padding-top: 50px;
+    }
+
     background-color: $white;
     z-index: 1;
 

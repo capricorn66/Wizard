@@ -84,7 +84,7 @@ const configElem = [
                 scale: [1,.7]
             }
         },
-        breakpoint: ['lg', 'xl']
+        breakpoint: ['md' ,'lg', 'xl']
     },
     {
         elem: '#js-gfx-floor_bright',
@@ -95,7 +95,7 @@ const configElem = [
                 scale: [1,.7]
             }
         },
-        breakpoint: ['lg', 'xl']
+        breakpoint: ['md' ,'lg', 'xl']
     },
     {
         elem: '#js-gfx-floor_dark',
@@ -106,6 +106,6 @@ const configElem = [
                 scale: [1,.7]
             }
         },
-        breakpoint: ['lg', 'xl']
+        breakpoint: ['md' ,'lg', 'xl']
     }
 ];
