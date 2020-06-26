@@ -12,12 +12,14 @@ import 'bootstrap/js/dist/collapse';
 import Cookies from 'js-cookie';
 import AnimWithScroll from "./AnimWithScroll";
 import inView from "in-view";
+import scrollToId from "./scrollToId";
 
 
 window.debounce = debounce;
 window.rwdMedia = rwdMedia;
 window.Cookies = Cookies;
 window.rippletInit = rippletInit;
+window.scrollToId = scrollToId;
 
 $(document).ready(function(e) {
 
@@ -44,21 +46,32 @@ $(document).ready(function(e) {
             el.classList.add("section-enter");
         });
 
-    inView('.section-wizard-step-2')
+    inView('.section-wizard-step-2-header')
         .on('enter', el => {
             el.classList.add("section-enter");
         });
 
-    inView('.section-wizard-step-3')
+    inView('.section-wizard-step-2-body')
         .on('enter', el => {
             el.classList.add("section-enter");
         });
 
-    inView.offset({bottom: 300});
+    inView('.section-wizard-step-3-header')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
 
+    inView('.section-wizard-step-3-body')
+        .on('enter', el => {
+            el.classList.add("section-enter");
+        });
+
+    inView.offset({bottom: 260});
 
 
 });
+
+
 
 
 function handleHeader() {

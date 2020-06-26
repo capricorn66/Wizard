@@ -31,12 +31,20 @@
 <body>
 
     <header>
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="brand" href="#">
-                <img src="./images/sk-logo.svg" alt="visionoptyk">
-            </a>
-            <h2 class="d-none d-lg-block">Dopasuj podłogę do swoich potrzeb</h2>
-            <a href=""><strong>Gdzie kupić?</strong></a>
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-6 col-lg-3">
+                    <a class="brand" href="#">
+                        <img src="./images/sk-logo.svg" alt="visionoptyk">
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <h2>Dopasuj podłogę do swoich potrzeb</h2>
+                </div>
+                <div class="col-6 col-lg-3 text-right">
+                    <a href=""><strong>Gdzie kupić?</strong></a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -44,12 +52,12 @@
         <div class="container">
 
             <h1>Wybierz podłogę dla siebie <small>w 3 prostych krokach</small></h1>
-            <button class="btn btn-primary btn-lg">ROZPOCZNIJ</button>
+            <button class="btn btn-primary btn-lg" onclick="scrollToId('#section-wizard-step-1')">ROZPOCZNIJ</button>
 
         </div>
     </section>
 
-    <section class="section-wizard-step-1">
+    <section class="section-wizard-step-1" id="section-wizard-step-1">
         <div class="section-wizard-step-1_1">
             <h2>
                 <div class="num">1</div>
@@ -155,7 +163,7 @@
 
     <section class="section-wizard-step-2">
         <div class="container">
-            <h2>
+            <h2 class="section-wizard-step-2-header">
                 <div class="num">2</div>
                 Jaka ma być jej wytrzymałość i odporność?
             </h2>
@@ -266,98 +274,100 @@
     </section>
 
     <section class="section-wizard-step-3 mb-60">
-        <h2>
+        <h2 class="section-wizard-step-3-header">
             <div class="num">3</div>
             Jakie mają być wymiary paneli?
         </h2>
-        <div class="row justify-content-between mb-60">
-            <div class="col-md-6 d-flex flex-column pr-md-30 pr-lg-30 pr-xl-60 position-relative">
-                <div class="text-right box-thickness-header">
-                    <h3>Grubość paneli</h3>
-                </div>
-                <div class="row align-items-center flex-grow-1 box-thickness-body">
-                    <div class="col-md-6 col-lg-7">
-                        <img src="images/thickness.png" class="img-fluid" height="561" width="640"/>
+        <div class="section-wizard-step-3-body">
+            <div class="row justify-content-between mb-60">
+                <div class="col-md-6 d-flex flex-column pr-md-30 pr-lg-30 pr-xl-60 position-relative">
+                    <div class="text-right box-thickness-header">
+                        <h3>Grubość paneli</h3>
                     </div>
-                    <div class="col-md-6 col-lg-5">
-                        <div class="d-flex flex-column justify-content-between align-items-end">
-                            <label class="label mb-40" for="floor_3_1_8mm">
-                                <input type="checkbox" name="floor_3_1" id="floor_3_1_8mm">
-                                <span class="checkbox ml-20"></span>
-                                <i class="icon-mm8 font-70 ml-40"></i>
-                            </label>
-                            <label class="label mb-40" for="floor_3_1_10mm">
-                                <input type="checkbox" name="floor_3_1" id="floor_3_1_10mm">
-                                <span class="checkbox ml-20"></span>
-                                <i class="icon-mm10 font-70 ml-40"></i>
-                            </label>
-                            <label class="label mb-40" for="floor_3_1_12mm">
-                                <input type="checkbox" name="floor_3_1" id="floor_3_1_12mm">
-                                <span class="checkbox ml-20"></span>
-                                <i class="icon-mm12 font-70 ml-40"></i>
-                            </label>
+                    <div class="row align-items-center flex-grow-1 box-thickness-body">
+                        <div class="col-md-6 col-lg-7">
+                            <img src="images/thickness.png" class="img-fluid" height="561" width="640"/>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="d-flex flex-column justify-content-between align-items-end">
+                                <label class="label mb-40" for="floor_3_1_8mm">
+                                    <input type="checkbox" name="floor_3_1" id="floor_3_1_8mm">
+                                    <span class="checkbox ml-20"></span>
+                                    <i class="icon-mm8 font-70 ml-40"></i>
+                                </label>
+                                <label class="label mb-40" for="floor_3_1_10mm">
+                                    <input type="checkbox" name="floor_3_1" id="floor_3_1_10mm">
+                                    <span class="checkbox ml-20"></span>
+                                    <i class="icon-mm10 font-70 ml-40"></i>
+                                </label>
+                                <label class="label mb-40" for="floor_3_1_12mm">
+                                    <input type="checkbox" name="floor_3_1" id="floor_3_1_12mm">
+                                    <span class="checkbox ml-20"></span>
+                                    <i class="icon-mm12 font-70 ml-40"></i>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 d-flex flex-column pl-md-30 pl-lg-30 pl-xl-60">
-                <div class="text-left box-floor-header">
-                    <h3>Wielkość paneli</h3>
-                </div>
-                <div class="row align-items-center flex-grow-1 box-floor-body">
-                    <div class="col-md-6 col-lg-5">
-                        <div class="d-flex flex-column justify-content-between align-items-start">
-                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_M">
-                                <span class="no-wrap">WĄSKI (M)</span>
-                                <input type="checkbox" name="floor_3_2" id="floor_3_2_M">
-                                <span class="checkbox ml-20"></span>
-                            </label>
-                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_L">
-                                <span class="no-wrap">KLASYCZNY (L)</span>
-                                <input type="checkbox" name="floor_3_2" id="floor_3_2_L">
-                                <span class="checkbox ml-20"></span>
-                            </label>
-                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_XL">
-                                <span class="no-wrap">SZEROKI (XL)</span>
-                                <input type="checkbox" name="floor_3_2" id="floor_3_2_XL">
-                                <span class="checkbox ml-20"></span>
-                            </label>
-                            <label class="label w-100 justify-content-between mb-40" for="floor_3_2_XXL">
-                                XXL
-                                <input type="checkbox" name="floor_3_2" id="floor_3_2_XXL">
-                                <span class="checkbox ml-20"></span>
-                            </label>
-                        </div>
+                <div class="col-md-6 d-flex flex-column pl-md-30 pl-lg-30 pl-xl-60">
+                    <div class="text-left box-floor-header">
+                        <h3>Wielkość paneli</h3>
                     </div>
-                    <div class="col-md-6 col-lg-7 d-flex align-items-end">
-                        <img src="images/man.png" class="img-fluid gfx-man mb-30 mr-n30" height="645" width="203"/>
-                        <div class="row">
-                            <div class="col-3 px-0" style="margin-right: -7%;">
-                                <div class="d-flex flex-column">
-                                    <img src="images/panel-m.png" class="img-fluid"/>
-                                    <span class="white mt-n40 mb-20">M</span>
-                                    <span class="gray-500">wąski</span>
-                                </div>
+                    <div class="row align-items-center flex-grow-1 box-floor-body">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="d-flex flex-column justify-content-between align-items-start">
+                                <label class="label w-100 justify-content-between mb-40" for="floor_3_2_M">
+                                    <span class="no-wrap">WĄSKI (M)</span>
+                                    <input type="checkbox" name="floor_3_2" id="floor_3_2_M">
+                                    <span class="checkbox ml-20"></span>
+                                </label>
+                                <label class="label w-100 justify-content-between mb-40" for="floor_3_2_L">
+                                    <span class="no-wrap">KLASYCZNY (L)</span>
+                                    <input type="checkbox" name="floor_3_2" id="floor_3_2_L">
+                                    <span class="checkbox ml-20"></span>
+                                </label>
+                                <label class="label w-100 justify-content-between mb-40" for="floor_3_2_XL">
+                                    <span class="no-wrap">SZEROKI (XL)</span>
+                                    <input type="checkbox" name="floor_3_2" id="floor_3_2_XL">
+                                    <span class="checkbox ml-20"></span>
+                                </label>
+                                <label class="label w-100 justify-content-between mb-40" for="floor_3_2_XXL">
+                                    XXL
+                                    <input type="checkbox" name="floor_3_2" id="floor_3_2_XXL">
+                                    <span class="checkbox ml-20"></span>
+                                </label>
                             </div>
-                            <div class="col-3 px-0" style="margin-right: -4%;">
-                                <div class="d-flex flex-column">
-                                    <img src="images/panel-l.png" class="img-fluid"/>
-                                    <span class="white mt-n40 mb-20">L</span>
-                                    <span class="gray-500">klasyczny</span>
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-end">
+                            <img src="images/man.png" class="img-fluid gfx-man mb-30 mr-n30" height="645" width="203"/>
+                            <div class="row">
+                                <div class="col-3 px-0" style="margin-right: -7%;">
+                                    <div class="d-flex flex-column">
+                                        <img src="images/panel-m.png" class="img-fluid"/>
+                                        <span class="white mt-n40 mb-20">M</span>
+                                        <span class="gray-500">wąski</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-3 px-0" style="margin-right: -1%;">
-                                <div class="d-flex flex-column">
-                                    <img src="images/panel-xl.png" class="img-fluid"/>
-                                    <span class="white mt-n40 mb-20">XL</span>
-                                    <span class="gray-500">szeroki</span>
+                                <div class="col-3 px-0" style="margin-right: -4%;">
+                                    <div class="d-flex flex-column">
+                                        <img src="images/panel-l.png" class="img-fluid"/>
+                                        <span class="white mt-n40 mb-20">L</span>
+                                        <span class="gray-500">klasyczny</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-3 px-0">
-                                <div class="d-flex flex-column">
-                                    <img src="images/panel-xxl.png" class="img-fluid"/>
-                                    <span class="mt-n40 mb-20">XXL</span>
-                                    <span class="gray-500">XXL</span>
+                                <div class="col-3 px-0" style="margin-right: -1%;">
+                                    <div class="d-flex flex-column">
+                                        <img src="images/panel-xl.png" class="img-fluid"/>
+                                        <span class="white mt-n40 mb-20">XL</span>
+                                        <span class="gray-500">szeroki</span>
+                                    </div>
+                                </div>
+                                <div class="col-3 px-0">
+                                    <div class="d-flex flex-column">
+                                        <img src="images/panel-xxl.png" class="img-fluid"/>
+                                        <span class="mt-n40 mb-20">XXL</span>
+                                        <span class="gray-500">XXL</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -365,13 +375,14 @@
                 </div>
             </div>
         </div>
+
         <button class="btn btn-primary btn-lg">ZOBACZ WYBRANE PODŁOGI</button>
 
     </section>
 
     <div class="wizard-summary">
-        <span class="mr-60 d-flex align-items-center">WYBRANE PODŁOGI: <strong class="ml-5">18</strong></span>
-        <span class="ml-60"><button class="btn white p-0">WYCZYŚĆ <i class="icon-refresh ml-10"></i></button></span>
+        <span class="mr-40 d-flex align-items-center no-wrap"><span class="d-none d-md-inline">WYBRANE</span> PODŁOGI: <strong class="ml-5">18</strong></span>
+        <span class="ml-40"><button class="btn white p-0 no-wrap">WYCZYŚĆ <i class="icon-refresh ml-10"></i></button></span>
     </div>
 
     <div class="bs4-xs d-block d-sm-none"></div>

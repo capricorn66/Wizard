@@ -8,18 +8,48 @@ header {
     width: 100%;
     background: $white;
     box-shadow: 0 2px 12px 0 rgba($lightblack,.2);
-    padding: 24px 0;
+    padding: 14px 0;
 
     body.sm & {
         .brand {
+            margin: 0;
             img {
-                width: 180px;
+                width: 200px;
+                @include media-breakpoint-only(xs) {
+                    width: 132px;
+                }
+                @include media-breakpoint-only(sm) {
+                    width: 180px;
+                }
+                @include media-breakpoint-only(md) {
+                    width: 200px;
+                }
+                @include media-breakpoint-only(lg) {
+                    width: 200px;
+                }
             }
         }
     }
+
     .brand {
+        margin: 10px 0;
+        display: block;
+        transition: margin ease-in .2s;
         img {
             width: 232px;
+            @include media-breakpoint-only(xs) {
+                width: 132px;
+            }
+            @include media-breakpoint-only(sm) {
+                width: 180px;
+            }
+            @include media-breakpoint-only(md) {
+                width: 220px;
+            }
+            @include media-breakpoint-only(lg) {
+                width: 200px;
+            }
+            transition: width ease-in .2s;
         }
     }
 
