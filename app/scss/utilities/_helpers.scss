@@ -401,7 +401,12 @@
     cursor: pointer;
 }
 
-
 .valign {
     vertical-align: middle;
+}
+
+@include media-breakpoint-up(md) {
+    .position-md-relative {
+        position: relative !important;
+    }
 }

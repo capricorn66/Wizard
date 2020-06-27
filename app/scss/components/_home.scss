@@ -5,7 +5,9 @@
 .section-wizard-step-1,
 .section-wizard-step-2,
 .section-wizard-step-3 {
-  text-align: center;
+  @include media-breakpoint-up(md) {
+    text-align: center;
+  }
   padding: 10vh 0;
   @include media-breakpoint-only(lg) {
     padding: 80px 0;
@@ -20,6 +22,7 @@
   background-color: $white;
   z-index: 1;
   position: relative;
+  text-align: center;
   @include media-breakpoint-only(xl) {
     min-height: 70vh;
   }
@@ -98,11 +101,14 @@
   h2 {
     margin-bottom: 1.125em;
     font-size: 52px;
+    position: relative;
     @include media-breakpoint-only(xs) {
       font-size: 22px;
+      padding-left: 40px;
     }
     @include media-breakpoint-only(sm) {
       font-size: 28px;
+      padding-left: 50px;
     }
     @include media-breakpoint-only(md) {
       font-size: 34px;
@@ -119,17 +125,20 @@
       height: 64px;
       border-radius: 32px;
       font-size: 40px;
+
       @include media-breakpoint-only(xs) {
         width: 26px;
         height: 26px;
         border-radius: 13px;
         font-size: 15px;
+        top: 2px;
       }
       @include media-breakpoint-only(sm) {
         width: 32px;
         height: 32px;
         border-radius: 16px;
         font-size: 17px;
+        top: 2px;
       }
       @include media-breakpoint-only(md) {
         width: 44px;
@@ -159,18 +168,26 @@
       position: relative;
       margin-right: .4em;
       top: -.1em;
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        left: 0;
+      }
     }
   }
   h3 {
     font-size: 36px;
     font-weight: 400;
-    letter-spacing: 4px;
-    margin-bottom: 64px;
+    letter-spacing: .1em;
+    margin-bottom: 1.4em;
     @include media-breakpoint-only(md) {
       font-size: 24px;
     }
     @include media-breakpoint-only(lg) {
       font-size: 28px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+      padding-top: 1.4em;
     }
     @media (min-width: 1200px) and (max-width: 1640px) {
       font-size: 32px;
@@ -180,6 +197,10 @@
 
 .section-wizard-step-1 {
   padding-top: 0;
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 0;
+  }
 
   .section-wizard-step-1_1,
   .section-wizard-step-1_2,
@@ -202,7 +223,12 @@
 
     &.section-enter .interior,
     &.section-enter h2 {
-      transform: translateY(-30px);
+      @include media-breakpoint-up(md) {
+        transform: translateY(-30px);
+      }
+      @include media-breakpoint-down(sm) {
+        transform: translateY(0);
+      }
       opacity: 1;
     }
 
@@ -214,9 +240,43 @@
     }
     .interior {
       display: block;
-      transform: translateY(100px);
-      opacity: 0;
+      @include media-breakpoint-up(md) {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+      }
       transition: all cubic-bezier(0.68, 0, 0.265, 1) .8s .2s;
+      .interior-img {
+        @include media-breakpoint-up(md) {
+          margin-bottom: 20px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding-bottom: 51%;
+          img {
+            height: 100%;
+            position: absolute;
+            right: 0;
+            max-width: none;
+            width: auto;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: -ms-flexbox;
+        display: flex;
+        .interior-img {
+          flex: 0 1 50%;
+          transform: translateY(0);
+        }
+        .label {
+          flex: 0 1 50%;
+        }
+      }
     }
 
   }
@@ -228,9 +288,66 @@
     .gfx-scroll {
       transform-origin: bottom;
     }
+    @include media-breakpoint-down(sm) {
+      label {
+        padding-bottom: 38%;
+        position: relative;
+        margin-bottom: 30px;
+        .gfx-scroll {
+          position: absolute;
+          transform: rotateZ(90deg);
+          top: 0;
+          transform-origin: right;
+          left: 50%;
+          height: 200%;
+        }
+        .label {
+          position: absolute;
+          top: 50%;
+          left: 25%;
+          transform: translateY(-50%) translateX(-50%);
+        }
+      }
+    }
   }
 
   .section-wizard-step-1_3 {
+
+    .interior-mat {
+      display: block;
+      transform: translateX(-50%);
+      transition: transform cubic-bezier(0.68, 0, 0.265, 1) .8s, opacity cubic-bezier(0.68, 0, 0.265, 1) .3s;
+      opacity: 0;
+    }
+    .interior-shine {
+      display: block;
+      transform: translateX(50%);
+      transition: transform cubic-bezier(0.68, 0, 0.265, 1) .8s, opacity cubic-bezier(0.68, 0, 0.265, 1) .3s;
+      opacity: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      label {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 30px;
+        .label {
+          flex: 0 1 50%;
+        }
+        .interior-shine,
+        .interior-mat {
+          width: 50%;
+          padding-bottom: 40%;
+          img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+          }
+        }
+      }
+    }
 
     &.section-enter {
       .interior-mat {
@@ -242,22 +359,14 @@
         opacity: 1;
       }
     }
-
-    .interior-mat {
-      transform: translateX(-50%);
-      transition: transform cubic-bezier(0.68, 0, 0.265, 1) .8s, opacity cubic-bezier(0.68, 0, 0.265, 1) .3s;
-      opacity: 0;
-    }
-    .interior-shine {
-      transform: translateX(50%);
-      transition: transform cubic-bezier(0.68, 0, 0.265, 1) .8s, opacity cubic-bezier(0.68, 0, 0.265, 1) .3s;
-      opacity: 0;
-    }
-
   }
 }
 
 .section-wizard-step-2 {
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
 
   .section-wizard-step-2-header {
     transform: translateY(100px);
@@ -291,6 +400,21 @@
   table {
     td {
       padding: 25px 15px;
+      @include media-breakpoint-down(sm) {
+        padding: 15px 3px;
+        &:last-of-type {
+          padding-right: 0;
+        }
+        .label {
+          -ms-flex-direction: row;
+          flex-direction: row;
+          .checkbox {
+            margin-top: 0;
+            margin-left: 12px !important;
+            margin-right: 12px !important;
+          }
+        }
+      }
       @include media-breakpoint-only(lg) {
         padding: 15px;
       }
@@ -303,6 +427,12 @@
         &.icon-i-18 {
           font-size: 70px;
         }
+        @include media-breakpoint-down(sm) {
+          font-size: 34px;
+          &.icon-i-18 {
+            font-size: 42px;
+          }
+        }
         @include media-breakpoint-only(lg) {
           font-size: 50px;
           &.icon-i-18 {
@@ -314,10 +444,12 @@
   }
   .section-wizard-step-2-img,
   .section-wizard-step-2-box {
-    position: relative;
     width: 40vw;
     @include media-breakpoint-only(lg) {
       width: 60vw;
+    }
+    @include media-breakpoint-up(md) {
+      position: relative;
     }
 
     @media (min-width: 1200px) and (max-width: 1640px) {
@@ -330,6 +462,22 @@
 
     left: 0;
   }
+
+  .section-wizard-step-2-box {
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      top: 0;
+      left: calc(100% - 10px);
+      height: 100%;
+      .section-wizard-step-2-img {
+        height: 100%;
+        > img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
   .section-wizard-step-2-img {
     > img:first-of-type {
       position: absolute;
@@ -340,7 +488,11 @@
 }
 
 .section-wizard-step-3 {
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
 
+  text-align: center;
   .section-wizard-step-3-header {
     transform: translateY(100px);
     opacity: 0;
@@ -349,9 +501,13 @@
       transform: translateY(0);
       opacity: 1;
     }
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
   }
 
   .section-wizard-step-3-body {
+    text-align: center;
     .box-thickness-header {
       transform: translateX(-30%);
       transition: transform cubic-bezier(0.68, 0, 0.265, 1) .6s .2s, opacity cubic-bezier(0.68, 0, 0.265, 1) .2s .2s;
@@ -376,6 +532,25 @@
       transition: opacity cubic-bezier(0.68, 0, 0.265, 1) .6s 2s;
       opacity: 0;
     }
+
+    .label {
+      i {
+        font-size: 70px;
+        @include media-breakpoint-only(lg) {
+          font-size: 64px;
+        }
+        @include media-breakpoint-only(md) {
+          font-size: 56px;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 50px;
+          -ms-flex-order: -1;
+          order: -1;
+          margin-bottom: 12px;
+        }
+      }
+    }
+
     &.section-enter {
       .box-thickness-header,
       .box-thickness-body {
@@ -392,8 +567,6 @@
       }
     }
   }
-
-
 
   .row .position-relative::after {
     content: "";

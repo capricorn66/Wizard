@@ -59,10 +59,12 @@
 
     <section class="section-wizard-step-1" id="section-wizard-step-1">
         <div class="section-wizard-step-1_1">
-            <h2>
-                <div class="num">1</div>
-                Jak ma wyglądać Twoja podłoga?
-            </h2>
+            <div class="container">
+                <h2>
+                    <div class="num">1</div>
+                    Jak ma wyglądać Twoja podłoga?
+                </h2>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5 position-static">
                     <label class="panel-label" for="floor_1_1_warm">
@@ -70,11 +72,13 @@
                             <img src="images/warm-panel.png" height="660" width="1322"/>
                         </span>
                         <span class="interior">
-                            <img src="images/warm.png" class="img-fluid mb-20" height="391" width="846"/>
+                            <div class="interior-img">
+                                <img src="images/warm.png" class="img-fluid" height="391" width="846"/>
+                            </div>
                             <span class="label mb-md-0 mb-lg-10 mb-xl-40">
                                 CIEPŁA
                                 <input type="checkbox" name="floor_1_1" id="floor_1_1_warm">
-                                <span class="checkbox ml-15"></span>
+                                <span class="checkbox ml-md-15"></span>
                             </span>
                         </span>
                     </label>
@@ -85,11 +89,13 @@
                             <img src="images/cold-panel.png" height="660" width="1322"/>
                         </span>
                         <span class="interior">
-                            <img src="images/cold.png" class="img-fluid mb-20" height="391" width="846"/>
+                            <div class="interior-img">
+                                <img src="images/cold.png" class="img-fluid" height="391" width="846"/>
+                            </div>
                             <span class="label mb-md-0 mb-lg-10 mb-xl-40">
                                 CHŁODNA
                                 <input type="checkbox" name="floor_1_1" id="floor_1_1_cold">
-                                <span class="checkbox ml-15"></span>
+                                <span class="checkbox ml-md-15"></span>
                             </span>
                         </span>
                     </label>
@@ -98,7 +104,7 @@
         </div>
 
         <div class="section-wizard-step-1_2">
-            <div class="container position-sticky">
+            <div class="position-sticky">
                 <div class="row justify-content-between">
                     <div class="col-md-4 px-0">
                         <label for="floor_1_2_brighter" class="d-flex flex-column align-items-center">
@@ -138,22 +144,26 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5">
                     <label for="floor_1_3_mat">
-                        <img src="images/mat.png" class="interior-mat img-fluid mb-30" height="601" width="948"/>
+                        <span class="interior-mat">
+                            <img src="images/mat.png" class="img-fluid mb-30" height="601" width="948"/>
+                        </span>
                         <span class="label">
-                        MATOWA
-                        <input type="checkbox" name="floor_1_3" id="floor_1_3_mat">
-                        <span class="checkbox ml-15"></span>
-                    </span>
+                            MATOWA
+                            <input type="checkbox" name="floor_1_3" id="floor_1_3_mat">
+                            <span class="checkbox ml-15"></span>
+                        </span>
                     </label>
                 </div>
                 <div class="col-md-6 col-lg-5">
                     <label for="floor_1_3_shine">
-                        <img src="images/shine.png" class="interior-shine img-fluid mb-30" height="601" width="952"/>
+                        <span class="interior-shine">
+                            <img src="images/shine.png" class="img-fluid mb-30" height="601" width="952"/>
+                        </span>
                         <span class="label">
-                        Z POŁYSKIEM
-                        <input type="checkbox" name="floor_1_3" id="floor_1_3_shine">
-                        <span class="checkbox ml-15"></span>
-                    </span>
+                            Z POŁYSKIEM
+                            <input type="checkbox" name="floor_1_3" id="floor_1_3_shine">
+                            <span class="checkbox ml-15"></span>
+                        </span>
                     </label>
                 </div>
             </div>
@@ -179,7 +189,7 @@
                                     <span class="checkbox ml-30"></span>
                                 </label>
                             </td>
-                            <td class="gray-500">
+                            <td class="gray-500 d-none d-lg-table-cell">
                                 mieszkanie: średnie natężenie ruchu, lokal użyteczności publicznej: niskie natężenie ruchu
                             </td>
                             <td class="text-center">
@@ -197,7 +207,7 @@
                                     <span class="checkbox ml-30"></span>
                                 </label>
                             </td>
-                            <td class="gray-500">
+                            <td class="gray-500 d-none d-lg-table-cell">
                                 mieszkanie oraz lokal użyteczności publicznej: wzmożone natężenie ruchu
                             </td>
                             <td class="text-center">
@@ -215,7 +225,7 @@
                                     <span class="checkbox ml-30"></span>
                                 </label>
                             </td>
-                            <td class="gray-500">
+                            <td class="gray-500 d-none d-lg-table-cell">
                                 najwyższa dostępna na rynku klasa ścieralności
                             </td>
                             <td class="text-center">
@@ -233,14 +243,20 @@
                                     <span class="checkbox ml-30"></span>
                                 </label>
                             </td>
-                            <td class="gray-500">
+                            <td class="gray-500 d-none d-lg-table-cell">
                                 wodoodporna płyta i szczelny zamek Aqua Pearl
                             </td>
                             <td class="text-center">
                                 <i class="icon-i-18 app-color-2"></i>
                             </td>
                             <td class="text-center">
-                                <strong class="app-color-2">do 24h</strong>
+                                <strong class="app-color-2">do<br class="d-md-none"> 24h</strong>
+                            </td>
+                        </tr>
+                        <tr class="d-md-none">
+                            <td colspan="4">
+                                <p class="app-color-2 font-12 mb-0">Przy podłogach wodoodpornych Aqua Zero rekomendowany jest montaż przez specjalistę. Informację o
+                                    możliwości montażu otrzymasz w punktach sprzedaży.</p>
                             </td>
                         </tr>
                         <tr>
@@ -254,13 +270,13 @@
                         </tr>
                     </table>
                 </div>
-                <div class="col-md-1 col-lg-3 col-xl-4 text-left position-relative">
+                <div class="col-md-1 col-lg-3 col-xl-4 text-left position-static position-md-relative">
                     <div class="section-wizard-step-2-box">
                         <div class="section-wizard-step-2-img">
                             <img src="images/ac-drop.png" class="img-fluid section-wizard-step-2-img-drop"/>
                             <img src="images/ac.png" class="img-fluid"/>
                         </div>
-                        <div class="row">
+                        <div class="row d-none d-md-flex">
                             <div class="col-lg-5 col-lg-xl-8 col-xl-10">
                                 <p class="app-color-2">Przy podłogach wodoodpornych Aqua Zero rekomendowany jest montaż przez specjalistę. Informację o
                                     możliwości montażu otrzymasz w punktach sprzedaży.</p>
@@ -274,48 +290,50 @@
     </section>
 
     <section class="section-wizard-step-3 mb-60">
-        <h2 class="section-wizard-step-3-header">
-            <div class="num">3</div>
-            Jakie mają być wymiary paneli?
-        </h2>
+        <div class="container">
+            <h2 class="section-wizard-step-3-header">
+                <div class="num">3</div>
+                Jakie mają być wymiary paneli?
+            </h2>
+        </div>
         <div class="section-wizard-step-3-body">
             <div class="row justify-content-between mb-60">
                 <div class="col-md-6 d-flex flex-column pr-md-30 pr-lg-30 pr-xl-60 position-relative">
-                    <div class="text-right box-thickness-header">
+                    <div class="text-center text-md-right box-thickness-header">
                         <h3>Grubość paneli</h3>
                     </div>
                     <div class="row align-items-center flex-grow-1 box-thickness-body">
-                        <div class="col-md-6 col-lg-7">
-                            <img src="images/thickness.png" class="img-fluid" height="561" width="640"/>
+                        <div class="col-10 col-sm-8 col-md-6 col-lg-7">
+                            <img src="images/thickness.png" class="img-fluid mt-n40 mt-md-0" height="561" width="640"/>
                         </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="d-flex flex-column justify-content-between align-items-end">
-                                <label class="label mb-40" for="floor_3_1_8mm">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            <div class="d-flex flex-md-column justify-content-between align-items-end">
+                                <label class="label mb-50 mb-md-40 mx-auto mx-md-0" for="floor_3_1_8mm">
                                     <input type="checkbox" name="floor_3_1" id="floor_3_1_8mm">
                                     <span class="checkbox ml-20"></span>
-                                    <i class="icon-mm8 font-70 ml-40"></i>
+                                    <i class="icon-mm8 ml-md-40"></i>
                                 </label>
-                                <label class="label mb-40" for="floor_3_1_10mm">
+                                <label class="label mb-50 mb-md-40 mx-auto mx-md-0" for="floor_3_1_10mm">
                                     <input type="checkbox" name="floor_3_1" id="floor_3_1_10mm">
                                     <span class="checkbox ml-20"></span>
-                                    <i class="icon-mm10 font-70 ml-40"></i>
+                                    <i class="icon-mm10 ml-md-40"></i>
                                 </label>
-                                <label class="label mb-40" for="floor_3_1_12mm">
+                                <label class="label mb-50 mb-md-40 mx-auto mx-md-0" for="floor_3_1_12mm">
                                     <input type="checkbox" name="floor_3_1" id="floor_3_1_12mm">
                                     <span class="checkbox ml-20"></span>
-                                    <i class="icon-mm12 font-70 ml-40"></i>
+                                    <i class="icon-mm12 ml-md-40"></i>
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex flex-column pl-md-30 pl-lg-30 pl-xl-60">
-                    <div class="text-left box-floor-header">
+                    <div class="text-center text-md-left box-floor-header">
                         <h3>Wielkość paneli</h3>
                     </div>
                     <div class="row align-items-center flex-grow-1 box-floor-body">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="d-flex flex-column justify-content-between align-items-start">
+                        <div class="col-5 col-md-6 col-lg-5">
+                            <div class="d-flex flex-column justify-content-between align-items-start mr-n30 mr-md-0">
                                 <label class="label w-100 justify-content-between mb-40" for="floor_3_2_M">
                                     <span class="no-wrap">WĄSKI (M)</span>
                                     <input type="checkbox" name="floor_3_2" id="floor_3_2_M">
@@ -338,7 +356,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-7 d-flex align-items-end">
+                        <div class="col-7 col-md-6 col-lg-7 d-flex align-items-end">
                             <img src="images/man.png" class="img-fluid gfx-man mb-30 mr-n30" height="645" width="203"/>
                             <div class="row">
                                 <div class="col-3 px-0" style="margin-right: -7%;">
@@ -376,13 +394,13 @@
             </div>
         </div>
 
-        <button class="btn btn-primary btn-lg">ZOBACZ WYBRANE PODŁOGI</button>
+        <button class="btn btn-primary btn-lg mx-auto mx-md-0">ZOBACZ WYBRANE PODŁOGI</button>
 
     </section>
 
     <div class="wizard-summary">
-        <span class="mr-40 d-flex align-items-center no-wrap"><span class="d-none d-md-inline">WYBRANE</span> PODŁOGI: <strong class="ml-5">18</strong></span>
-        <span class="ml-40"><button class="btn white p-0 no-wrap">WYCZYŚĆ <i class="icon-refresh ml-10"></i></button></span>
+        <span class="mr-30 mr-md-40 d-flex align-items-center no-wrap"><span class="d-none d-md-inline">WYBRANE</span> PODŁOGI: <strong class="ml-5">18</strong></span>
+        <span class="ml-30 ml-md-40"><button class="btn white p-0 no-wrap">WYCZYŚĆ <i class="icon-refresh ml-10"></i></button></span>
     </div>
 
     <div class="bs4-xs d-block d-sm-none"></div>

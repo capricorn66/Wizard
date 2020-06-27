@@ -13,6 +13,7 @@ import Cookies from 'js-cookie';
 import AnimWithScroll from "./AnimWithScroll";
 import inView from "in-view";
 import scrollToId from "./scrollToId";
+import copyValue from "./copyValue";
 
 
 window.debounce = debounce;
@@ -20,6 +21,7 @@ window.rwdMedia = rwdMedia;
 window.Cookies = Cookies;
 window.rippletInit = rippletInit;
 window.scrollToId = scrollToId;
+window.copyValue = copyValue;
 
 $(document).ready(function(e) {
 
@@ -70,9 +72,6 @@ $(document).ready(function(e) {
 
 
 });
-
-
-
 
 function handleHeader() {
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
