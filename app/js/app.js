@@ -14,7 +14,7 @@ import AnimWithScroll from "./AnimWithScroll";
 import inView from "in-view";
 import scrollToId from "./scrollToId";
 import copyValue from "./copyValue";
-
+import './nav-scroll.js';
 
 window.debounce = debounce;
 window.rwdMedia = rwdMedia;
@@ -28,6 +28,8 @@ $(document).ready(function(e) {
     window.onscroll = function() {handleHeader()};
     handleHeader();
     rippletInit();
+
+    $('.nav-scroll.nav-pills-scroll').navScroll();
 
     configElem.map(
         elemCfg => new AnimWithScroll( elemCfg )

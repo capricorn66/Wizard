@@ -165,6 +165,12 @@
       color: $white;
     }
   }
+  &:hover {
+    .label {
+      background-color: $gray-200;
+      color: $gray-500;
+    }
+  }
   .label {
     background-color: $gray-100;
     color: $gray-400;
@@ -173,4 +179,12 @@
     height: 32px;
     padding: 0 16px;
   }
+}
+
+.input-group-text {
+  background-color: $white;
+}
+
+.form-control {
+  border-radius: 0;
 }

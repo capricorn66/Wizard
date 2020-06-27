@@ -118,6 +118,20 @@
   min-height: 68px;
   border-radius: 0;
   font-size: 22px;
+
+  @include media-breakpoint-only(md) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 60px;
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    min-height: 48px;
+    font-size: 15px;
+  }
+
   &[aria-expanded="false"] {
     .collapse-icon {
       .icon-up {

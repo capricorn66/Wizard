@@ -51,14 +51,32 @@
 
 .section-filters {
   text-align: center;
-  padding: 80px;
+  padding: 80px 0;
+
   h1 {
     font-size: 44px;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 1.1em;
     strong {
       font-weight: 600;
     }
+
+    @include media-breakpoint-only(xs) {
+      font-size: 22px;
+    }
+    @include media-breakpoint-only(sm) {
+      font-size: 28px;
+    }
+    @include media-breakpoint-only(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-only(lg) {
+      font-size: 36px;
+    }
+    @media (min-width: 1200px) and (max-width: 1640px) {
+      font-size: 42px;
+    }
+
   }
 
   .collapsing,
@@ -90,15 +108,47 @@
 
 .section-summary {
   text-align: center;
-  padding: 80px;
+  padding: 80px 0;
   background-color: $gray-100;
   h1 {
     font-size: 56px;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 1.1em;
+
+    @include media-breakpoint-only(xs) {
+      font-size: 22px;
+    }
+    @include media-breakpoint-only(sm) {
+      font-size: 28px;
+    }
+    @include media-breakpoint-only(md) {
+      font-size: 36px;
+    }
+    @include media-breakpoint-only(lg) {
+      font-size: 46px;
+    }
+    @media (min-width: 1200px) and (max-width: 1640px) {
+      font-size: 42px;
+    }
+
   }
   h2 {
     font-size: 24px;
     font-weight: 300;
+  }
+
+  .input-group-text {
+    border-color: transparent !important;
+  }
+  .input-group-prepend + .form-control {
+    border-left: 0;
+  }
+  .form-control,
+  .form-control:focus {
+    border-color: transparent !important;
+  }
+
+  .form-control-lg {
+    border-color: $gray-800 !important;
   }
 }
