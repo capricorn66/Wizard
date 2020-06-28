@@ -22,56 +22,14 @@ window.Cookies = Cookies;
 window.rippletInit = rippletInit;
 window.scrollToId = scrollToId;
 window.copyValue = copyValue;
+window.AnimWithScroll = AnimWithScroll;
+window.inView = inView;
 
 $(document).ready(function(e) {
 
     window.onscroll = function() {handleHeader()};
     handleHeader();
     rippletInit();
-
-    $('.nav-scroll.nav-pills-scroll').navScroll();
-
-    configElem.map(
-        elemCfg => new AnimWithScroll( elemCfg )
-    );
-
-    inView('.section-welcome')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView('.section-wizard-step-1_1')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView('.section-wizard-step-1_3')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView('.section-wizard-step-2-header')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView('.section-wizard-step-2-body')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView('.section-wizard-step-3-header')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView('.section-wizard-step-3-body')
-        .on('enter', el => {
-            el.classList.add("section-enter");
-        });
-
-    inView.offset({bottom: 260});
-
 
 });
 
@@ -86,40 +44,3 @@ function handleHeader() {
 // jQuery.fn.jquery
 // $.fn.popover.Constructor.VERSION
 // $.fn.hasAttr
-
-
-const configElem = [
-    {
-        elem: '#js-gfx-floor_brighter',
-        scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
-        scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
-        styles: {
-            transform: {
-                scale: [1,.7]
-            }
-        },
-        breakpoint: ['md' ,'lg', 'xl']
-    },
-    {
-        elem: '#js-gfx-floor_bright',
-        scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
-        scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
-        styles: {
-            transform: {
-                scale: [1,.7]
-            }
-        },
-        breakpoint: ['md' ,'lg', 'xl']
-    },
-    {
-        elem: '#js-gfx-floor_dark',
-        scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
-        scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
-        styles: {
-            transform: {
-                scale: [1,.7]
-            }
-        },
-        breakpoint: ['md' ,'lg', 'xl']
-    }
-];

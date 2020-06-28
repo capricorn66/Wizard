@@ -16,6 +16,8 @@
   border-radius: 24px;
   padding-bottom: .01em;
   padding-top: 0;
+  transition: background cubic-bezier(0.68, 0, 0.265, 1) .3s, border-color cubic-bezier(0.68, 0, 0.265, 1) .3s, color cubic-bezier(0.68, 0, 0.265, 1) .3s;
+
 }
 
 .btn-sm {
@@ -65,8 +67,8 @@
   &:not(:disabled):not(.disabled).active,
   &:hover,
   &:focus {
-    background-color: darken($app-color-1, 6%);
-    border-color: darken($app-color-1, 6%);
+    background-color: lighten($app-color-1, 10%);
+    border-color: lighten($app-color-1, 10%);
     box-shadow: none !important;
   }
 }
@@ -89,14 +91,14 @@
 .btn-gray-600 {
   background-color: $gray-600;
   border-color: $gray-600;
-  color: white !important;
+  color: white;
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   &:hover,
   &:focus {
-    background-color: lighten($gray-600, 6%);
-    border-color: lighten($gray-600, 6%);
+    background-color: $white;
+    color: $gray-600;
     box-shadow: none !important;
   }
 }

@@ -149,10 +149,16 @@
       height: 30px;
     }
     border-radius: 50%;
-    border: 1px solid $app-color-1;
+    border: 2px solid lighten($app-color-1, 20%);
     display: inline-block;
     background-position: center 20px;
-    transition: background cubic-bezier(0.68, 0, 0.265, 1) .3s;
+    transition: background cubic-bezier(0.68, 0, 0.265, 1) .3s, border-color cubic-bezier(0.68, 0, 0.265, 1) .3s;
+  }
+
+  &:hover {
+    .checkbox {
+      border-color: $app-color-1;
+    }
   }
 }
 
