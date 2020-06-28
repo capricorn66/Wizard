@@ -985,8 +985,8 @@
                             <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"  id="wizardLink">
                         </div>
                         <button class="btn btn-gray-600 no-wrap mb-20 mb-lg-0 mr-lg-20" onclick="copyValue(this, 'wizardLink')">
-                            <span class="event">SKOPIUJ LINK <i class="icon-copy ml-10"></i></span>
-                            <span class="event-success">SKOPIOWANO</span>
+                            <span class="event-ready">SKOPIUJ LINK <i class="icon-copy ml-10"></i></span>
+                            <span class="event-success" style="display: none;">SKOPIOWANO</span>
                         </button>
                         <div class="d-flex">
                             <a href=""><i class="icon-messenger font-26 mx-10"></i></a>
@@ -1072,8 +1072,13 @@
     </script>
 
     <div class="wizard-summary">
-        <span class="mr-30 mr-md-40 d-flex align-items-center no-wrap"><span class="d-none d-md-inline">WYBRANE</span> PODŁOGI: <strong class="ml-5">18</strong></span>
-        <span class="ml-30 ml-md-40"><button class="btn white p-0 no-wrap">WYCZYŚĆ <i class="icon-refresh ml-10"></i></button></span>
+        <span class="mr-30 mr-md-40 d-flex align-items-center no-wrap">
+            <span class="d-none d-md-inline">WYBRANE</span> PODŁOGI: <strong class="ml-5">18</strong>
+        </span>
+        <span class="ml-30 ml-md-40">
+            <button class="btn white p-0 no-wrap">WYCZYŚĆ <i class="icon-refresh font-14 ml-10"></i></button>
+            <button class="btn white p-0 no-wrap" style="display: none"><i class="icon-prev font-14 mr-10"></i> WRÓĆ DO WYBORU</button>
+        </span>
     </div>
 
     <div class="bs4-xs d-block d-sm-none"></div>

@@ -120,7 +120,7 @@
   min-height: 68px;
   border-radius: 0;
   font-size: 22px;
-
+  transition: width cubic-bezier(0.68, 0, 0.265, 1) .3s;
   @include media-breakpoint-only(md) {
     padding-left: 2rem;
     padding-right: 2rem;

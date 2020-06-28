@@ -7,20 +7,16 @@
 
 .wizard-summary {
   background-color: $app-color-1;
+  min-width: 560px;
   color: $white;
   border-radius: 32px 32px 0 0;
   padding: 16px 56px 32px;
-  @include media-breakpoint-only(xs) {
+  @include media-breakpoint-down(sm) {
     border-radius: 0;
     padding: 0 26px;
     box-shadow:none;
     width: 100%;
-  }
-  @include media-breakpoint-only(sm) {
-    border-radius: 0;
-    padding: 0 26px;
-    box-shadow:none;
-    width: 100%;
+    min-width: auto;
   }
   @include media-breakpoint-only(md) {
     border-radius: 24px 24px 0 0;
@@ -34,7 +30,7 @@
     &:hover,
     &:focus,
     &:active {
-      color: $white;
+      color: rgba($white, .6);
     }
   }
   position: fixed;
