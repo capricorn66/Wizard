@@ -1,6 +1,13 @@
 /* decors
 *******************************************************************/
 
+.decor-box {
+  @include media-breakpoint-down(sm) {
+    height: 230px;
+    overflow: hidden;
+  }
+}
+
 .decor {
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,19 +20,24 @@
   &::after {
     content: "";
     position: absolute;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba($black, 0);
     transition: background-color ease-in .2s;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    @include media-breakpoint-down(sm) {
+      background: linear-gradient(0deg, rgba($black,.4) 0%, rgba($black,0) 100%);
+    }
   }
   &:hover {
-    &::after {
-      background-color: rgba(0,0,0,.5);
-    }
-    .decor-desc {
-      transform: translateY(0);
+    @include media-breakpoint-up(md) {
+      &::after {
+        background-color: rgba($black,.5);
+      }
+      .decor-desc {
+        transform: translateY(0);
+      }
     }
   }
   .new {
@@ -33,11 +45,14 @@
     display: inline-block;
     background-color: $app-color-1;
     padding: 0 10px 1px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
     color: $white;
-    z-index: 2;
+    margin-bottom: 8px;
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      z-index: 2;
+    }
   }
   .decor-desc {
     transition: transform ease-in .2s;
@@ -45,6 +60,10 @@
     z-index: 1;
     padding: 55px 15px 10px;
     transform: translateY(45%);
+    @include media-breakpoint-down(sm) {
+      transform: translateY(0);
+      padding-top: 15px;
+    }
     top: 0;
     right: 0;
     left: 0;
@@ -68,4 +87,49 @@
       height: 70px;
     }
   }
+}
+
+.decor-extras {
+  @include media-breakpoint-down(sm) {
+    transform: translateY(-100%);
+    a {
+      color: $white;
+      text-align: center;
+      font-size: 11px;
+      i {
+        color: $white;
+        display: block;
+      }
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $white;
+        i {
+          color: $white;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    background-color: $gray-100;
+    a {
+      font-size: 14px;
+      i {
+        color: $gray-400;
+        margin-right: 5px;
+        &.icon-ceneo {
+          color: $app-color-3;
+        }
+      }
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $app-color-1;
+        i {
+          color: $app-color-1;
+        }
+      }
+    }
+  }
+
 }

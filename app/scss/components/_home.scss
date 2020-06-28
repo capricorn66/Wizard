@@ -288,6 +288,15 @@
     .gfx-scroll {
       transform-origin: bottom;
     }
+    &.section-enter {
+      @include media-breakpoint-down(sm) {
+        .gfx-scroll {
+          transform: translateX(0) rotateZ(90deg);
+          opacity: 1;
+        }
+      }
+    }
+
     @include media-breakpoint-down(sm) {
       label {
         padding-bottom: 38%;
@@ -295,7 +304,9 @@
         margin-bottom: 30px;
         .gfx-scroll {
           position: absolute;
-          transform: rotateZ(90deg);
+          transform: translateX(100%) rotateZ(90deg);
+          transition: transform cubic-bezier(0.68, 0, 0.265, 1) .8s, opacity cubic-bezier(0.68, 0, 0.265, 1) .3s;
+          opacity: 0;
           top: 0;
           transform-origin: right;
           left: 50%;
@@ -322,6 +333,9 @@
     .interior-shine {
       display: block;
       transform: translateX(50%);
+      @include media-breakpoint-down(sm) {
+        transform: translateX(-50%);
+      }
       transition: transform cubic-bezier(0.68, 0, 0.265, 1) .8s, opacity cubic-bezier(0.68, 0, 0.265, 1) .3s;
       opacity: 0;
     }
@@ -383,16 +397,20 @@
     opacity: 0;
     transition: all cubic-bezier(0.68, 0, 0.265, 1) .8s .2s;
 
-    .section-wizard-step-2-img-drop {
-      opacity: 1;
-      transition: opacity cubic-bezier(0.68, 0, 0.265, 1) 2s 3s;
+    .section-wizard-step-2-img {
+      .section-wizard-step-2-img-drop {
+        opacity: 1;
+        transition: opacity cubic-bezier(0.68, 0, 0.265, 1) 2s 3s;
+      }
     }
 
     &.section-enter {
       transform: translateY(0);
       opacity: 1;
-      .section-wizard-step-2-img-drop {
-        opacity: 0;
+      .section-wizard-step-2-img {
+        .section-wizard-step-2-img-drop {
+          opacity: 0;
+        }
       }
     }
   }
@@ -447,6 +465,9 @@
     width: 40vw;
     @include media-breakpoint-only(lg) {
       width: 60vw;
+    }
+    @include media-breakpoint-only(md) {
+      width: 100vw;
     }
     @include media-breakpoint-up(md) {
       position: relative;

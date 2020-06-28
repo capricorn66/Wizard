@@ -144,7 +144,8 @@
     border-color: transparent !important;
   }
 
-  .form-control-lg {
+  .form-control-lg,
+  .form-control-lg:focus {
     border-color: $gray-800 !important;
   }
 }
