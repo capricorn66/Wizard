@@ -2,14 +2,36 @@ import $ from 'jquery';
 import debounce from 'lodash.debounce';
 
 $.fn.navScroll = function(config) {
+
+    const that = this;
+
     const options = $.extend({
         swipeLength: 150,
         swipeTime: 200,
         root: 'window',
     }, config);
 
+    $.fn.navScroll.disabled = function() {
+        const $that = $(that);
+        $that.each( function() {
+            const $this = $(this);
+            $this.addClass('nav-scroll-disabled');
+        })
+    }
+
+    $.fn.navScroll.enabled = function() {
+        const $that = $(that);
+        $that.each( function() {
+            const $this = $(this);
+            $this.removeClass('nav-scroll-disabled');
+        })
+    }
+
     return this.each(function() {
         const $this = $(this);
+
+        $.fn.navScroll.enabled();
+
         if ( $this.hasClass('nav-scroll-init')) {
             return false;
         }
@@ -94,6 +116,7 @@ $.fn.navScroll = function(config) {
 
             swipeTo('right', 'left', options.swipeLength);
         });
+
         $swipeBtnLeft.on('click', function() {
             $('> li', $swipeNavContent).each( function() {
                 const $left = $(this);

@@ -6,6 +6,9 @@
     height: 230px;
     overflow: hidden;
   }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 20px;
+  }
 }
 
 .decor {
