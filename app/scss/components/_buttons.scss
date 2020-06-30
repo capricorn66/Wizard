@@ -97,7 +97,7 @@
   &:not(:disabled):not(.disabled).active,
   &:hover,
   &:focus {
-    background-color: $white;
+    background-color: $gray-100;
     color: $gray-600;
     box-shadow: none !important;
   }
@@ -117,21 +117,33 @@
 }
 
 .btn-collapse {
-  min-height: 68px;
-  border-radius: 0;
-  font-size: 22px;
-  transition: width cubic-bezier(0.68, 0, 0.265, 1) .3s;
-  @include media-breakpoint-only(md) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    min-height: 60px;
-    font-size: 18px;
+  &.btn-lg {
+    min-height: 68px;
+    font-size: 22px;
+    @include media-breakpoint-only(md) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      min-height: 60px;
+      font-size: 18px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+      min-height: 48px;
+      font-size: 15px;
+    }
   }
-  @include media-breakpoint-down(sm) {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-    min-height: 48px;
-    font-size: 15px;
+  border-radius: 0;
+  font-size: 15px;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  transition: width cubic-bezier(0.68, 0, 0.265, 1) .3s;
+  background-color: $gray-700;
+  color: $white;
+  &:hover,
+  &:focus {
+    background-color: $gray-700;
+    color: $white;
   }
 
   &[aria-expanded="false"] {

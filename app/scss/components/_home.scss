@@ -197,10 +197,7 @@
 
 .section-wizard-step-1 {
   padding-top: 0;
-
-  @include media-breakpoint-down(sm) {
-    padding-bottom: 0;
-  }
+  padding-bottom: 0;
 
   .section-wizard-step-1_1,
   .section-wizard-step-1_2,
@@ -397,21 +394,21 @@
     opacity: 0;
     transition: all cubic-bezier(0.68, 0, 0.265, 1) .8s .2s;
 
-    .section-wizard-step-2-img {
+    .section-wizard-step-2-box {
       .section-wizard-step-2-img-drop {
         opacity: 1;
         transition: opacity cubic-bezier(0.68, 0, 0.265, 1) 2s 3s;
+      }
+      &.section-enter {
+        .section-wizard-step-2-img-drop {
+          opacity: 0;
+        }
       }
     }
 
     &.section-enter {
       transform: translateY(0);
       opacity: 1;
-      .section-wizard-step-2-img {
-        .section-wizard-step-2-img-drop {
-          opacity: 0;
-        }
-      }
     }
   }
 
@@ -552,6 +549,19 @@
     .gfx-man {
       transition: opacity cubic-bezier(0.68, 0, 0.265, 1) .6s 2s;
       opacity: 0;
+    }
+
+    .font-fluid {
+      font-size: 14px;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+      @include media-breakpoint-only(lg) {
+        font-size: 10px;
+      }
+      @media (min-width: 1200px) and (max-width: 1640px) {
+        font-size: 11px;
+      }
     }
 
     .label {

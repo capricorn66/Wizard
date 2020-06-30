@@ -7,10 +7,10 @@
 
 .wizard-summary {
   background-color: $app-color-1;
-  min-width: 560px;
+  min-width: 580px;
   color: $white;
-  border-radius: 32px 32px 0 0;
-  padding: 16px 56px 32px;
+  border-radius: 40px 40px 0 0;
+  padding: 16px 56px;
   @include media-breakpoint-down(sm) {
     border-radius: 0;
     padding: 0 26px;
@@ -19,12 +19,12 @@
     min-width: auto;
   }
   @include media-breakpoint-only(md) {
-    border-radius: 24px 24px 0 0;
-    padding: 12px 48px 24px;
+    border-radius: 28px 28px 0 0;
+    padding: 12px 48px;
   }
   @include media-breakpoint-only(lg) {
-    border-radius: 20px 20px 0 0;
-    padding: 10px 40px 20px;
+    border-radius: 32px 32px 0 0;
+    padding: 10px 40px;
   }
   .btn.white {
     &:hover,
@@ -47,14 +47,15 @@
 
 .section-filters {
   text-align: center;
-  padding: 80px 0;
+  padding: 80px 0 50px;
 
   h1 {
     font-size: 44px;
     font-weight: 300;
     margin-bottom: 1.1em;
+    color: $gray-700;
     strong {
-      font-weight: 600;
+      font-weight: 700;
     }
 
     @include media-breakpoint-only(xs) {
@@ -85,6 +86,7 @@
       font-size: 22px;
       font-weight: 300;
       margin-bottom: 20px;
+      color: $gray-700;
     }
     h4 {
       font-size: 18px;
@@ -97,7 +99,9 @@
   margin-bottom: 50px;
   h2 {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 600;
+    color: $gray-600;
+    text-transform: uppercase;
     text-align: center;
   }
 }
