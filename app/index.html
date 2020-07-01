@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <div class="section-wizard-step-1_2">
+        <div class="section-wizard-step-1_2 section-enter">
             <div class="position-sticky">
                 <div class="row justify-content-between">
                     <div class="col-md-4 px-0">
@@ -349,30 +349,37 @@
                             </div>
                         </div>
                         <div class="col-7 col-md-6 col-lg-7 d-flex align-items-end">
-                            <img src="images/man.png" class="img-fluid gfx-man mb-30 mr-n30 ml-30" height="645" width="203"/>
-                            <div class="row">
-                                <div class="col-3 px-0" style="margin-right: -7%;">
+
+                            <div class="row justify-content-end">
+                                <div class="col-25 px-0 d-flex align-items-end">
+                                    <div class="d-flex flex-column" style="margin-right: -120%;">
+                                        <img src="images/man.png" class="img-fluid gfx-man"/>
+                                        <span class="mt-n40 mb-20">&nbsp;</span>
+                                        <span class="font-fluid">&nbsp;</span>
+                                    </div>
+                                </div>
+                                <div class="col-25 px-0" style="margin-right: -6.7%;">
                                     <div class="d-flex flex-column">
                                         <img src="images/panel-m.png" class="img-fluid"/>
                                         <span class="white mt-n40 mb-20">M</span>
                                         <span class="gray-500 font-fluid">wąski</span>
                                     </div>
                                 </div>
-                                <div class="col-3 px-0" style="margin-right: -4%;">
+                                <div class="col-25 px-0" style="margin-right: -4%;">
                                     <div class="d-flex flex-column">
                                         <img src="images/panel-l.png" class="img-fluid"/>
                                         <span class="white mt-n40 mb-20">L</span>
                                         <span class="gray-500 font-fluid">klasyczny</span>
                                     </div>
                                 </div>
-                                <div class="col-3 px-0" style="margin-right: -1%;">
+                                <div class="col-25 px-0" style="margin-right: -1.6%;">
                                     <div class="d-flex flex-column">
                                         <img src="images/panel-xl.png" class="img-fluid"/>
                                         <span class="white mt-n40 mb-20">XL</span>
                                         <span class="gray-500 font-fluid">szeroki</span>
                                     </div>
                                 </div>
-                                <div class="col-3 px-0">
+                                <div class="col-25 px-0">
                                     <div class="d-flex flex-column">
                                         <img src="images/panel-xxl.png" class="img-fluid"/>
                                         <span class="mt-n40 mb-20">XXL</span>
@@ -380,6 +387,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -398,7 +406,7 @@
                 elemCfg => new AnimWithScroll( elemCfg )
             );
 
-            const section = ['.section-welcome', '.section-wizard-step-1_1', '.section-wizard-step-1_2', '.section-wizard-step-2-box']
+            const section = ['.section-welcome', '.section-wizard-step-1_1', '.section-wizard-step-2-box']
 
             section.map(
                 section => inView(section).on('enter', el => { el.classList.add("section-enter"); })

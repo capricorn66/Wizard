@@ -18,9 +18,9 @@
 		margin-right: -4px;
 
 		.nav-scroll-btn {
-			background: rgba($white, .6);
+			background: rgba($white, 0);
 			&:hover {
-				background: rgba($black, .6);
+				background: rgba($black, 0);
 			}
 		}
 
@@ -173,7 +173,13 @@
 				background-image: $icon-arrow-left-white;
 				background-repeat: no-repeat;
 				background-position: center;
-				width: 100%;
+				width: 30px;
+				height: 30px;
+				border-radius: 15px;
+				background-color: rgba($black,.5);
+				background-size: 12px;
+				position: relative;
+				left: 10px;
 			}
 		}
 
@@ -184,7 +190,13 @@
 				background-image: $icon-arrow-right-white;
 				background-repeat: no-repeat;
 				background-position: center;
-				width: 100%;
+				width: 30px;
+				height: 30px;
+				border-radius: 15px;
+				background-color: rgba($black,.5);
+				background-size: 12px;
+				position: relative;
+				right: 10px;
 			}
 		}
 	}
