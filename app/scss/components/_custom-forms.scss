@@ -21,6 +21,7 @@
     }
 
     &.panel-warm {
+      will-change: transform;
       @include media-breakpoint-up(md) {
         right: calc(50% + -10px);
       }
@@ -43,6 +44,7 @@
       }
     }
     &.panel-cold {
+      will-change: transform;
       @include media-breakpoint-up(md) {
         left: calc(50% + -10px);
       }

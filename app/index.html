@@ -38,7 +38,7 @@
         </div>
     </header>
 
-    <section class="section-welcome">
+    <section class="section-welcome section-enter">
         <div class="container">
 
             <h1>Wybierz podłogę dla siebie <small>w 3 prostych krokach</small></h1>
@@ -95,41 +95,40 @@
 
         <div class="section-wizard-step-1_2 section-enter">
             <div class="position-sticky">
-                <div class="row justify-content-between">
-                    <div class="col-md-4 px-0">
-                        <label for="floor_1_2_brighter" class="d-flex flex-column align-items-center">
-                            <img src="images/brighter.png" id="js-gfx-floor_brighter" class="img-fluid gfx-scroll mb-30"/>
-                            <span class="label flex-column">
-                                JASNA
-                                <input type="checkbox" name="floor_1_2" id="floor_1_2_brighter">
-                                <span class="checkbox mt-10"></span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="col-md-4 px-0">
-                        <label for="floor_1_2_bright" class="d-flex flex-column align-items-center">
-                            <img src="images/bright.png" id="js-gfx-floor_bright" class="img-fluid gfx-scroll mb-30"/>
-                            <span class="label flex-column">
-                                ŚREDNIE
-                                <input type="checkbox" name="floor_1_2" id="floor_1_2_bright">
-                                <span class="checkbox mt-10"></span>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="col-md-4 px-0">
-                        <label for="floor_1_2_dark" class="d-flex flex-column align-items-center">
-                            <img src="images/dark.png" id="js-gfx-floor_dark" class="img-fluid gfx-scroll mb-30"/>
-                            <span class="label flex-column">
-                                CIEMNA
-                                <input type="checkbox" name="floor_1_2" id="floor_1_2_dark">
-                                <span class="checkbox mt-10"></span>
-                            </span>
-                        </label>
+                    <div class="row justify-content-between">
+                        <div class="col-md-4 px-0">
+                            <label for="floor_1_2_brighter" class="d-flex flex-column align-items-center">
+                                <img src="images/brighter.png" id="js-gfx-floor_brighter" class="img-fluid gfx-scroll mb-30"/>
+                                <span class="label flex-column">
+                                    JASNA
+                                    <input type="checkbox" name="floor_1_2" id="floor_1_2_brighter">
+                                    <span class="checkbox mt-10"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-md-4 px-0">
+                            <label for="floor_1_2_bright" class="d-flex flex-column align-items-center">
+                                <img src="images/bright.png" id="js-gfx-floor_bright" class="img-fluid gfx-scroll mb-30"/>
+                                <span class="label flex-column">
+                                    ŚREDNIE
+                                    <input type="checkbox" name="floor_1_2" id="floor_1_2_bright">
+                                    <span class="checkbox mt-10"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-md-4 px-0">
+                            <label for="floor_1_2_dark" class="d-flex flex-column align-items-center">
+                                <img src="images/dark.png" id="js-gfx-floor_dark" class="img-fluid gfx-scroll mb-30"/>
+                                <span class="label flex-column">
+                                    CIEMNA
+                                    <input type="checkbox" name="floor_1_2" id="floor_1_2_dark">
+                                    <span class="checkbox mt-10"></span>
+                                </span>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
-
         <div class="section-wizard-step-1_3 section-enter">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -406,11 +405,13 @@
                 elemCfg => new AnimWithScroll( elemCfg )
             );
 
-            const section = ['.section-welcome', '.section-wizard-step-1_1', '.section-wizard-step-2-box']
+            if( !$('.section-wizard-step-1_1').hasClass('section-enter')) {
+                inView('.section-wizard-step-1_1').on('enter', el => { el.classList.add("section-enter"); })
+            }
 
-            section.map(
-                section => inView(section).on('enter', el => { el.classList.add("section-enter"); })
-            )
+            if( !$('.section-wizard-step-2-box').hasClass('section-enter')) {
+                inView('.section-wizard-step-2-box').on('enter', el => { el.classList.add("section-enter"); })
+            }
 
             inView.offset({bottom: (rwdMedia.xs() || rwdMedia.sm()) ? 200 : 260});
             inView.threshold(0.5);
@@ -419,29 +420,7 @@
 
         const configElem = [
             {
-                elem: '#js-gfx-floor_brighter',
-                scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
-                scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
-                styles: {
-                    transform: {
-                        scale: [1,.7]
-                    }
-                },
-                breakpoint: ['md' ,'lg', 'xl']
-            },
-            {
-                elem: '#js-gfx-floor_bright',
-                scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
-                scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
-                styles: {
-                    transform: {
-                        scale: [1,.7]
-                    }
-                },
-                breakpoint: ['md' ,'lg', 'xl']
-            },
-            {
-                elem: '#js-gfx-floor_dark',
+                elem: ['#js-gfx-floor_brighter', '#js-gfx-floor_bright', '#js-gfx-floor_dark' ],
                 scrollStartAt: '$(".section-wizard-step-1_2").offset().top - ($(".section-wizard-step-1_2").height() * .7)',
                 scrollEndAt: '$(".section-wizard-step-1_2").offset().top',
                 styles: {

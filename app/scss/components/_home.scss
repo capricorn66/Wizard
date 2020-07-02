@@ -284,11 +284,12 @@
     }
     .gfx-scroll {
       transform-origin: bottom;
+      will-change: transform;
     }
     &.section-enter {
       @include media-breakpoint-down(sm) {
         .gfx-scroll {
-          transform: translateX(0) rotateZ(90deg);
+          transform: translateX(0) rotateZ(90deg) !important;
           opacity: 1;
         }
       }

@@ -27,19 +27,9 @@ window.inView = inView;
 
 $(document).ready(function(e) {
 
-    window.onscroll = function() {handleHeader()};
-    handleHeader();
     rippletInit();
 
 });
-
-function handleHeader() {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        document.body.className = "sm";
-    } else {
-        document.body.className = "";
-    }
-}
 
 // jQuery.fn.jquery
 // $.fn.popover.Constructor.VERSION

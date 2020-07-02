@@ -103,6 +103,21 @@
   }
 }
 
+.btn-outline-gray-600 {
+  background-color: $gray-100;
+  border-color: $gray-600;
+  color: $gray-600;
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  &:hover,
+  &:focus {
+    background-color: $gray-600;
+    color: $white;
+    box-shadow: none !important;
+  }
+}
+
 .btn-outline-primary {
   border-color: $body-color;
   color: $body-color;

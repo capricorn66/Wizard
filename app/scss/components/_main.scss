@@ -103,6 +103,14 @@
     color: $gray-600;
     text-transform: uppercase;
     text-align: center;
+    @include media-breakpoint-only(xs) {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    @include media-breakpoint-only(sm) {
+      font-size: 20px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -135,6 +143,10 @@
   h2 {
     font-size: 24px;
     font-weight: 300;
+    @include media-breakpoint-only(xs) {
+      font-size: 18px;
+      font-weight: 500;
+    }
   }
 
   .input-group-text {
