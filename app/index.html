@@ -401,9 +401,26 @@
 
         document.addEventListener('DOMContentLoaded', function(){
 
-            configElem.map(
-                elemCfg => new AnimWithScroll( elemCfg )
-            );
+            const imagesS1 = $('.section-wizard-step-1_2 .gfx-scroll');
+            let imagesLoaded = 0;
+
+            imagesS1.each(function() {
+                const $this = $(this);
+
+                $this.on('load', function() {
+                    imagesLoaded++;
+                    if(imagesLoaded === imagesS1.length){
+
+                        configElem.map(
+                            elemCfg => new AnimWithScroll( elemCfg )
+                        );
+
+                    }
+                }).each(function() {
+                    if(this.complete) $(this).trigger('load');
+                });
+
+            });
 
             if( !$('.section-wizard-step-1_1').hasClass('section-enter')) {
                 inView('.section-wizard-step-1_1').on('enter', el => { el.classList.add("section-enter"); })
