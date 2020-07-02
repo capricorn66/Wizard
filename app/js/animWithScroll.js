@@ -136,6 +136,8 @@ class AnimWithScroll {
                     allValShift = allValShift + ' ' + valShift;
                 }
 
+                console.log(this.scrollStartAt +' ,  ' + this.scrollEndAt)
+
                 if (this.isArray(this.data.elem)) {
                     for (let j = 0; j < this.data.elem.length; j++)
                     {
