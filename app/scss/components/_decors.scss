@@ -2,6 +2,10 @@
 *******************************************************************/
 
 .decor-box {
+  @include media-breakpoint-down(md) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
   @include media-breakpoint-up(lg) {
     margin-bottom: 20px;
   }
@@ -106,11 +110,7 @@
 
   @include media-breakpoint-down(sm) {
     a {
-      text-align: center;
       font-size: 11px;
-      i {
-        display: block;
-      }
       &:hover,
       &:focus {
         text-decoration: none;
