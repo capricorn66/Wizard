@@ -8,54 +8,48 @@ header {
     width: 100%;
     background: $white;
     box-shadow: 0 2px 12px 0 rgba($lightblack,.2);
-    padding: 14px 0;
+    padding: 0 0 24px 0;
+    @include media-breakpoint-down(md) {
+        padding-bottom: 14px;
+    }
 
-    body.sm & {
-        .brand {
-            margin: 0;
-            img {
-                width: 200px;
-                @include media-breakpoint-only(xs) {
-                    width: 132px;
-                }
-                @include media-breakpoint-only(sm) {
-                    width: 180px;
-                }
-                @include media-breakpoint-only(md) {
-                    width: 200px;
-                }
-                @include media-breakpoint-only(lg) {
-                    width: 200px;
-                }
-            }
+    .container-fluid {
+        @include media-breakpoint-up(lg) {
+            padding-left: 51px;
+            padding-right: 51px;
         }
     }
 
-    .brand {
-        margin: 10px 0;
-        display: block;
-        transition: margin ease-in .2s;
-        img {
-            width: 232px;
-            @include media-breakpoint-only(xs) {
-                width: 132px;
+    .corpHeader {
+        background-color: $gray-800;
+        height: 36px;
+        margin-bottom: 24px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 14px;
+        }
+        .brand {
+            padding: 9px 30px 8px 0;
+            display: block;
+            margin: 0;
+            img {
+                width: 118px;
+                display: block;
             }
-            @include media-breakpoint-only(sm) {
-                width: 180px;
-            }
-            @include media-breakpoint-only(md) {
-                width: 220px;
-            }
-            @include media-breakpoint-only(lg) {
-                width: 200px;
-            }
-            transition: width ease-in .2s;
         }
     }
 
     h2 {
         font-weight: 300;
         margin-bottom: 0;
+        @include media-breakpoint-only(xs) {
+            font-size: 16px;
+        }
+        @include media-breakpoint-only(sm) {
+            font-size: 18px;
+        }
+        @include media-breakpoint-only(md) {
+            font-size: 18px;
+        }
     }
 
     a {
