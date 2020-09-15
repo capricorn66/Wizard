@@ -462,18 +462,18 @@
       }
       i {
         font-size: 60px;
-        &.icon-i-18 {
+        &.icon-aquazero {
           font-size: 70px;
         }
         @include media-breakpoint-down(sm) {
           font-size: 34px;
-          &.icon-i-18 {
+          &.icon-aquazero {
             font-size: 42px;
           }
         }
         @include media-breakpoint-only(lg) {
           font-size: 50px;
-          &.icon-i-18 {
+          &.icon-aquazero {
             font-size: 60px;
           }
         }
